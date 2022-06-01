@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+body{
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+nav{
+    background-color: rgb(11, 73, 73);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position:static;
+    z-index:2;
+    animation: colchange 5s infinite alternate;
+}
+.brand{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+}
+nav ul li{
+    margin: 0px 10px;
+}
+a:hover{
+    color: rgb(255, 241, 206);
+    text-shadow: 0px 0px 5px black;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+@keyframes colchange {
+    from{
+        background-color: rgb(11, 73, 73);
+    }
+    to{
+        background-color: rgb(19, 187, 187);
+    }
+}
+.container{
+    height: 67vh;
+    background-color: rgba(29, 29, 29, 0.5);
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    width: 70%;
+    margin: 20px auto;
+}
+.bottom{
+    background-color: rgb(8, 99, 99);
+    position: sticky;
+    bottom:0;
+    height: 19vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    gap:20px;
+    animation: colchange 5s infinite alternate;
+    margin:0;
+}
+#progressbar{
+    width:70vw;
+    transform: translateY(-30px);
+}
+.icons{
+    cursor: pointer;
+}
+.icons img:hover{
+    width:60px;
+    height: 60px;
+}
+.songlist{
+    overflow-y: scroll;
+    width: 100%;
+}
+.songitem{
+    background-color: rgba(255,255,255,0.50);
+    display:flex;
+    color:black;
+    gap:10px;
+    justify-content: space-between;
+    align-items: center;  
+    margin:10px ;
+    border-radius:10px;
+}
+.songitem img{
+    box-shadow: 0px 0px 5px black;
+}
+@media only screen and (min-width:500px){
+    .cover{
+        width: 50%;
+        height: 100%;
+    }
+    .lyc{
+        width: 50%;
+        height: 60%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .lyrics{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .lyc{
+        width: 100%;
+        height: 50%;
+        transform: translateY(-5%);
+    }
+    .cover{
+        width: 100%;
+        height: 50%;
+    }
+    .lyrics img{
+        width: 50%;
+        height: 50%;
+    }
+    .songitem{
+        background-color: rgb(255, 255, 255,0.75);
+        box-shadow: 0px 0px 2px 1px;
+    }
+    .container{
+        border-radius: 20px;
+        background-color: rgba(2, 77, 64, 0.26);
+    }
+    .songitem{
+        font-size: 10px;
+        justify-content: space-between;
+        justify-items: center;
+    }
+    .songitem img{
+        width:10%;
+        height: 10%;
+        border-radius: 50%;
+    }
+    .album{
+        display: none;
+    }
+    .bottom{
+        height:20vh;
+        top:0;
+        position:relative;
+    }
+    .container{
+        height:65vh;
+    }
+    body{
+        background-position-x: 600px;
+    }
+  }
+footer{
+    position: sticky;
+}
+.songinfo img{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.playb:hover{
+    width:40px;
+    height:40px;
+}
+.data{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height:30px;
+    width: 80vw;
+    transform: translateY(-40px);
+    justify-content: space-between;
+}
+#naam{
+    position: relative;
+}
+.icons{
+    transform: translateY(-50px);
+    z-index: 2;
+}
+.lyrics{
+    height:100%;
+    width:100%;
+    bottom:0;
+    border-radius: 30px;
+    background-color: rgb(38, 42, 43);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    /* flex-direction: row; */
+    
+}
+.cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    /* width: 50%;
+    height: 100%; */
+}
+.lyc{
+    background-color: rgb(128, 128, 128);
+    /* width: 50%;
+    height: 60%; */
+    border-width: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    overflow: scroll;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spotify.css">
+    <title>My Music</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="brand"><img src="logo.png" alt="Linkin Park" height="50px" width="50px"><span><h1>Music</h1></span></li>
+                <li><a href="https://en.wikipedia.org/wiki/Linkin_Park">Home</a>
+                <li><a href="#">About</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="lyrics">
+                <div class="cover"><img id="pic" src="hybridtheory.jpg" height="50%" width="50%">
+                    <h2 id="title">name</h2>
+                </div>
+                <div class="lyc">
+                </div>
+            </div>
+            <div class="songlist">
+                <h1 style="color:white;">This is Linkin Park</h1>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">In The End</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>5:34</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="0">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">Pushing Me Away</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:15</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="1">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">With You</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:56</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="2">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height=15%" width="15%">
+                    <span class="sname">My December</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:24</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="3">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">Pepercut</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>5:34</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="4">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">One Step Closer</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:15</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="5">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height="15%" width="15%">
+                    <span class="sname">Crawling</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:56</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="6">
+                </div>
+                <div class="songitem">
+                    <img src="hybridtheory.jpg" height=15%" width="15%">
+                    <span class="sname">Runaway</span>
+                    <span class="album">Hybrid Theory</span>
+                    <span class="artist">Linkin Park</span>
+                    <!-- <span class="songlistname"><span>3:24</span></span> -->
+                    <img style="cursor:pointer" src="play.png" height="30px" width="30px" class="playb" id="7">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="bottom">
+            <div class="songinfo">
+                <img src="music.gif" width="50px" height="50px" id="gif" style="transform: translateY(-30px);">
+            </div>
+            <input type="range" name="range" id="progressbar" min="0" max="100" style="cursor:pointer" value="0">
+            <div class="data">
+                <p id="naam">song name</p>
+                <p id="dura">00:00</p>
+            </div>
+            <div class="icons">
+                <img src="bwd.png" height="50px" width="50px" id="previous">
+                <img src="play.png" height="50px" width="50px" id="masterplay">
+                <img src="pause.png" height="50px" width="50px" id="masterpause">
+                <img src="fwd.png" height="50px" width="50px" id="next">
+            </div>
+            
+        </div>
+        
+    </footer>
+    
+</body>
+<script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+<script src="spotify.js"></script>
+</html>
