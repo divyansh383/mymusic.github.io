@@ -112,6 +112,15 @@ a{
     }
 }
 @media only screen and (max-width: 500px) {
+    #progressbar{
+        padding-bottom: 5px;
+    }
+    .icons{
+        padding-top:5px ;
+    }
+    .songlist{
+        width:100%;
+    }
     .lyrics{
         flex-direction: column;
         justify-content: center;
@@ -135,7 +144,11 @@ a{
     }
     .container{
         border-radius: 20px;
-        background-color: rgba(2, 77, 64, 0.26);
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 10px;
+        width: 95%;
+        background-color: rgba(2, 77, 64,0.26);
     }
     .songitem{
         font-size: 10px;
@@ -143,20 +156,21 @@ a{
         justify-items: center;
     }
     .songitem img{
-        width:10%;
-        height: 10%;
+        width:15%;
+        height: 15%;
         border-radius: 50%;
     }
     .album{
         display: none;
     }
     .bottom{
-        height:20vh;
+        height:max-content;
         top:0;
         position:relative;
     }
     .container{
         height:65vh;
+        margin:10px;
     }
     body{
         background-position-x: 600px;
