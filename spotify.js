@@ -17,7 +17,20 @@ let dura=document.getElementById('dura');
 let gif=document.getElementById('gif');
 let songlist=document.getElementsByClassName('songlist');
 let lyrics=document.getElementsByClassName('lyrics');
+let lyc=document.getElementsByClassName('lyc');
 //
+lyc[0].addEventListener('click',()=>{
+    if(lyc[0].style.height!="100%"){
+        lyc[0].style.height="100%";
+        pic.style.display="none";
+    }
+})
+title.addEventListener('click',()=>{
+    if(lyc[0].style.height=="100%"){
+        lyc[0].style.height="10%";
+        pic.style.display="block";
+    }
+})
 gif.addEventListener('click',()=>{
     // if(gif.style.opacity==1){
         console.log("view");

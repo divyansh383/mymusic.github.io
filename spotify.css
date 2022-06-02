@@ -108,8 +108,22 @@ a{
     }
     .lyc{
         width: 50%;
-        height: 60%;
+        height: 100%;
     }
+    .playb:hover{
+        width:10%;
+        height:10%;
+    }
+}
+
+#lytex{
+    /* background-color: antiquewhite; */
+    width:90%;
+    height:90%;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 @media only screen and (max-width: 500px) {
     #progressbar{
@@ -127,15 +141,14 @@ a{
     }
     .lyc{
         width: 100%;
-        height: 50%;
-        transform: translateY(-5%);
+        height: 10%;
     }
     .cover{
         width: 100%;
         height: 50%;
     }
     .lyrics img{
-        width: 50%;
+        width:fit-content;
         height: 50%;
     }
     .songitem{
@@ -174,6 +187,10 @@ a{
     body{
         background-position-x: 600px;
     }
+    .playb:hover{
+        width:15%;
+        height:15%;
+    }
   }
 footer{
     position: sticky;
@@ -182,10 +199,7 @@ footer{
     opacity: 0;
     transition: all 0.5s ease-in;
 }
-.playb:hover{
-    width:15%;
-    height:15%;
-}
+
 .data{
     margin:0;
     padding: 0;
