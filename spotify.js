@@ -39,7 +39,8 @@ gif.addEventListener('click',()=>{
             lyrics[0].style.display="flex";
             lyrics[0].style.transition="all 1s";
             title.innerHTML=songs[n].songname;
-            pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+            // pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+            pic.src=songs[n].coverpath;
         }
         else{
             songlist[0].style.display="block";
@@ -116,7 +117,8 @@ function nextsong(){
     n=Number(n);   
     nm=songs[n].songname;
     title.innerHTML=songs[n].songname;
-    pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+    // pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+    pic.src=songs[n].coverpath;
     naam.innerHTML=nm;
 }
 prev.addEventListener('click',prevsong);
@@ -132,7 +134,8 @@ function prevsong(){
     n=Number(n);  
     nm=songs[n].songname;
     title.innerHTML=songs[n].songname;
-    pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+    // pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
+    pic.src=songs[n].coverpath;
     naam.innerHTML=nm; 
 }
 audioelement.addEventListener('timeupdate',()=>{
@@ -141,9 +144,14 @@ audioelement.addEventListener('timeupdate',()=>{
     var mins=Math.floor(Math.trunc(audioelement.currentTime)/60);
     var secs=Math.trunc(audioelement.currentTime)-mins*60;
     document.getElementById('dura').innerHTML=("0"+mins).slice(-2)+":"+("0"+secs).slice(-2);
+    if(progress>=100){
+        console.log("end");
+        paused();
+    }
 });
 progressbar.addEventListener('change',()=>{
     audioelement.currentTime=(progressbar.value*audioelement.duration)/100;
+    
 })
 Array.from(document.getElementsByClassName('playb')).forEach((element)=>{
     element.addEventListener('click',(e)=>{ 
@@ -175,5 +183,4 @@ Array.from(document.getElementsByClassName('playb')).forEach((element)=>{
         }
     })
     })
-
 
