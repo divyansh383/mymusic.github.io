@@ -19,7 +19,7 @@ let songlist=document.getElementsByClassName('songlist');
 let lyrics=document.getElementsByClassName('lyrics');
 //
 gif.addEventListener('click',()=>{
-    if(gif.style.opacity==1){
+    // if(gif.style.opacity==1){
         console.log("view");
         if(songlist[0].style.display!="none"){
             songlist[0].style.display="none";
@@ -32,7 +32,7 @@ gif.addEventListener('click',()=>{
             songlist[0].style.display="block";
             lyrics[0].style.display="none";}
         }
-});
+);
 
 masterpause.style.display='none';
 let progressbar=document.getElementById('progressbar');

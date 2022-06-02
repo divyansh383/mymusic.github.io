@@ -156,15 +156,14 @@ a{
         justify-items: center;
     }
     .songitem img{
-        width:15%;
-        height: 15%;
+        width:10%;
+        height: 10%;
         border-radius: 50%;
     }
     .album{
         display: none;
     }
     .bottom{
-        height:max-content;
         top:0;
         position:relative;
     }
@@ -184,8 +183,8 @@ footer{
     transition: all 0.5s ease-in;
 }
 .playb:hover{
-    width:40px;
-    height:40px;
+    width:15%;
+    height:15%;
 }
 .data{
     margin:0;
