@@ -51,14 +51,14 @@ gif.addEventListener('click',()=>{
 masterpause.style.display='none';
 let progressbar=document.getElementById('progressbar');
 let songs=[
-    {songname:"Puhsing Me Away",filepath:"music/0.mp3",coverpath:"covers/hybridtheory.jpg"},
-    {songname:"In The End",filepath:"music/1.mp3",coverpath:"covers/ite.jpg"},
-    {songname:"With You",filepath:"music/2.mp3",coverpath:"covers/hybridtheory.jpg"},
-    {songname:"My December",filepath:"music/3.mp3",coverpath:"covers/hybridtheory.jpg"},
-    {songname:"Papercut",filepath:"music/4.mp3",coverpath:"covers/hybridtheory.jpg"},
-    {songname:"One Step Closer",filepath:"music/5.mp3",coverpath:"covers/hybridtheory.jpg"},
-    {songname:"Crawling",filepath:"music/6.mp3",coverpath:"covers/crawing_cover.jpg"},
-    {songname:"Runaway",filepath:"music/7.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"Puhsing Me Away",filepath:"0.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"In The End",filepath:"1.mp3",coverpath:"covers/ite.jpg"},
+    {songname:"With You",filepath:"2.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"My December",filepath:"3.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"Papercut",filepath:"4.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"One Step Closer",filepath:"5.mp3",coverpath:"covers/hybridtheory.jpg"},
+    {songname:"Crawling",filepath:"6.mp3",coverpath:"covers/crawing_cover.jpg"},
+    {songname:"Runaway",filepath:"7.mp3",coverpath:"covers/hybridtheory.jpg"},
 ]
 let audioelement=new Audio(songs[n].filepath);
 let nm=songs[n].songname;
@@ -106,16 +106,17 @@ function paused(){
 masterpause.addEventListener('click',paused);
 next.addEventListener('click',nextsong);
 function nextsong(){
-    if(n<7){
+    n=Number(n); 
+    if(Number(n)<7){
         n=n+1;
     }
     else{
         n=0;
     }
     console.log(n);
-    playb[n].click();
-    n=Number(n);   
-    nm=songs[n].songname;
+    playb[Number(n)].click();
+      
+    nm=songs[Number(n)].songname;
     title.innerHTML=songs[n].songname;
     // pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
     pic.src=songs[n].coverpath;
@@ -123,16 +124,16 @@ function nextsong(){
 }
 prev.addEventListener('click',prevsong);
 function prevsong(){
-    if(n>0){
+    n=Number(n);  
+    if(Number(n)>0){
         n=n-1;
     }
     else{
         n=7;
     }
     console.log(n);
-    playb[n].click();
-    n=Number(n);  
-    nm=songs[n].songname;
+    playb[Number(n)].click();
+    nm=songs[Number(n)].songname;
     title.innerHTML=songs[n].songname;
     // pic.src='file:///D:/python/frontend/spotify%20clone/'+songs[n].coverpath;
     pic.src=songs[n].coverpath;
